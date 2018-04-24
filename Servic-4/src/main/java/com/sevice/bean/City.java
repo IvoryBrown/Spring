@@ -16,12 +16,12 @@ public class City {
     private Long id;
 
     private String name;
-    private int population;
+    private Integer population;
 
     public City() {
     }
 
-    public City(Long id, String name, int population) {
+    public City(Long id, String name, Integer population) {
         this.id = id;
         this.name = name;
         this.population = population;
@@ -43,42 +43,12 @@ public class City {
         this.name = name;
     }
 
-    public int getPopulation() {
+    public Integer getPopulation() {
         return population;
     }
 
-    public void setPopulation(int population) {
+    public void setPopulation(Integer population) {
         this.population = population;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.id);
-        hash = 79 * hash + Objects.hashCode(this.name);
-        hash = 79 * hash + this.population;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final City other = (City) obj;
-        if (this.population != other.population) {
-            return false;
-        }
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        return Objects.equals(this.id, other.id);
     }
     
     @Override
