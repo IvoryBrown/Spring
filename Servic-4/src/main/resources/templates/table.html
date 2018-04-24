@@ -1,25 +1,58 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:dt="http://www.thymeleaf.org/dandelion/datatables">
-<head></head>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="generator"
+	content="WYSIWYG Web Builder 12 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="table1.css" rel="stylesheet">
+<link href="table.css" rel="stylesheet">
+</head>
 <body>
-<div class="span12">
-    <table id="myTableId" dt:table="true">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>LastName</th>
-                <th>FirstName</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="person : ${cities}">
-                <td th:text="${person.id}">1</td>
-                <td th:text="${person.name}">Doe</td>
-                <td th:text="${person.population}">John</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+	<div id="wb_LayoutGrid1">
+		<div id="LayoutGrid1">
+			<div class="row">
+				<div class="col-1">
+					<div id="wb_Text1">
+						<span style="color: #000000; font-family: Arial; font-size: 13px;">asa</span>
+					</div>
+				</div>
+				<div class="col-2">
+					<div id="wb_Text2">
+						<span style="color: #000000; font-family: Arial; font-size: 13px;">asa</span>
+					</div>
+				</div>
+				<div class="col-3">
+					<div id="wb_Text4">
+						<span style="color: #000000; font-family: Arial; font-size: 13px;">asa</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="wb_LayoutGrid2">
+		<div id="LayoutGrid2">
+			<div class="row">
+				<div class="col-1">
+					<table
+						style="display: table; width: 100%; height: 25px; z-index: 3;"
+						id="Table1">
+						    <tr  th:each="person : ${cities}">
+							<td class="cell0" th:text="${person.id}"><span
+								style="color: #000000; font-family: Arial; font-size: 13px; line-height: 16px;">
+							</span></td>
+							<td class="cell0" th:text="${person.name}"><span
+								style="color: #000000; font-family: Arial; font-size: 13px; line-height: 16px;">
+							</span></td>
+							<td class="cell0" th:text="${person.population}"><span
+								style="color: #000000; font-family: Arial; font-size: 13px; line-height: 16px;">
+							</span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

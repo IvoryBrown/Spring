@@ -1,0 +1,207 @@
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+#wb_LayoutGrid1
+{
+   clear: both;
+   position: relative;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: #61A2B1;
+   background-image: none;
+   border: 0px #CCCCCC solid;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+#LayoutGrid1
+{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   padding: 0px 10px 0px 10px;
+   margin-right: auto;
+   margin-left: auto;
+}
+#LayoutGrid1 .row
+{
+   margin-right: -10px;
+   margin-left: -10px;
+}
+#LayoutGrid1 .col-1
+{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   font-size: 0px;
+   min-height: 1px;
+   padding-right: 10px;
+   padding-left: 10px;
+   position: relative;
+}
+#LayoutGrid1 .col-1
+{
+   float: left;
+}
+#LayoutGrid1 .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   width: 100%;
+   text-align: left;
+}
+#LayoutGrid1:before,
+#LayoutGrid1:after,
+#LayoutGrid1 .row:before,
+#LayoutGrid1 .row:after
+{
+   display: table;
+   content: " ";
+}
+#LayoutGrid1:after,
+#LayoutGrid1 .row:after
+{
+   clear: both;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid1 .col-1
+{
+   float: none;
+   width: 100%;
+}
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 div
+{
+   text-align: center;
+}
+#wb_LayoutGrid2
+{
+   clear: both;
+   position: relative;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: #707070;
+   background-image: none;
+   border: 0px #CCCCCC solid;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+#LayoutGrid2
+{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   padding: 0px 15px 0px 15px;
+   margin-right: auto;
+   margin-left: auto;
+}
+#LayoutGrid2 .row
+{
+   margin-right: -15px;
+   margin-left: -15px;
+}
+#LayoutGrid2 .col-1, #LayoutGrid2 .col-2, #LayoutGrid2 .col-3
+{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   font-size: 0px;
+   min-height: 1px;
+   padding-right: 15px;
+   padding-left: 15px;
+   position: relative;
+}
+#LayoutGrid2 .col-1, #LayoutGrid2 .col-2, #LayoutGrid2 .col-3
+{
+   float: left;
+}
+#LayoutGrid2 .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   width: 25%;
+   text-align: left;
+}
+#LayoutGrid2 .col-2
+{
+   background-color: transparent;
+   background-image: none;
+   width: 50%;
+   text-align: left;
+}
+#LayoutGrid2 .col-3
+{
+   background-color: transparent;
+   background-image: none;
+   width: 25%;
+   text-align: left;
+}
+#LayoutGrid2:before,
+#LayoutGrid2:after,
+#LayoutGrid2 .row:before,
+#LayoutGrid2 .row:after
+{
+   display: table;
+   content: " ";
+}
+#LayoutGrid2:after,
+#LayoutGrid2 .row:after
+{
+   clear: both;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid2 .col-1, #LayoutGrid2 .col-2, #LayoutGrid2 .col-3
+{
+   float: none;
+   width: 100%;
+}
+}
+#jQueryMenu1, #jQueryMenu1 .ui-menu-item a
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-decoration: none;
+}
+#jQueryMenu1 .ui-menu-item a
+{
+   color: #333333;
+}
+#jQueryMenu1 li
+{
+   list-style: none;
+   width: auto;
+}
+#jQueryMenu1 .ui-menu-item-wrapper
+{
+   line-height: 15px;
+   padding: 10px 15px 10px 15px;
+}
+#jQueryMenu1 li ul .ui-menu-item-wrapper
+{
+   width: 10px;
+}
