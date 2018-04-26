@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Névtelen oldal</title>
+<meta name="generator"
+	content="WYSIWYG Web Builder 12 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="device/font-awesome.min.css" rel="stylesheet">
+<link href="device/Untitled2.css" rel="stylesheet">
+<link href="device/deviceClient.css" rel="stylesheet">
+<script src="device/jquery-1.12.4.min.js"></script>
+<script src="device/wb.panel.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#PanelMenu1").panel({
+			animate : true,
+			animationDuration : 200,
+			animationEasing : 'linear',
+			dismissible : true,
+			display : 'overlay',
+			position : 'right',
+			toggle : true,
+			overlay : true
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="wb_PageHeader">
+		<div id="PageHeader">
+			<div class="row">
+				<div class="col-1">
+					<div id="wb_FontAwesomeIcon1"
+						style="display: inline-block; width: 40px; height: 40px; text-align: center; z-index: 0;">
+						<a href="index"><div id="FontAwesomeIcon1">
+								<i class="fa fa-user-circle-o">&nbsp;</i>
+							</div></a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div id="wb_Heading1"
+						style="display: inline-block; width: 100%; text-align: center; z-index: 1;">
+						<h1 id="Heading1">PcVipService</h1>
+					</div>
+				</div>
+				<div class="col-3">
+					<div id="wb_PanelMenu1"
+						style="display: inline-block; width: 63px; height: 70px; z-index: 2;">
+						<a href="#PanelMenu1_markup" id="PanelMenu1">&nbsp;</a>
+						<div id="PanelMenu1_markup">
+							<ul>
+								<li><a href="index"><i class="fa fa-home fa-fw">&nbsp;</i><span>Home</span></a></li>
+								<li><a href="#"><i class="fa fa-user fa-fw">&nbsp;</i><span>&#220;gyf&#233;l
+											T&#225;bla</span></a></li>
+								<li><a href="deviceClient"><i
+										class="fa fa-camera fa-fw">&nbsp;</i><span>Eszk&#246;z
+											T&#225;bla</span></a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="wb_ThreeColumns">
+		<div id="ThreeColumns-overlay"></div>
+		<div id="ThreeColumns">
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-2">
+					<table
+						style="display: table; width: 100%; height: 205px; z-index: 3;"
+						id="StripedTable">
+						<tr>
+							<td class="cell0"><span
+								style="color: #61A2B1; font-family: Arial; font-size: 13px; line-height: 16px;"><strong>Rank</strong></span></td>
+							<td class="cell0"><span
+								style="color: #61A2B1; font-family: Arial; font-size: 13px; line-height: 16px;"><strong>Name</strong></span></td>
+							<td class="cell0"><span
+								style="color: #61A2B1; font-family: Arial; font-size: 13px; line-height: 16px;"><strong>Year</strong></span></td>
+							<td class="cell0"><span
+								style="color: #61A2B1; font-family: Arial; font-size: 13px; line-height: 16px;"><strong>Rating</strong></span></td>
+							<td class="cell0"><span
+								style="color: #61A2B1; font-family: Arial; font-size: 13px; line-height: 16px;"><strong>Votes</strong></span></td>
+						</tr>
+						<tr th:each="person : ${cities}">
+							<td class="cell1" th:text="${person.id}"><span
+								style="color: #F5FFFA; font-family: Arial; font-size: 13px; line-height: 16px;">1</span></td>
+							<td class="cell1" th:text="${person.name}"><span
+								style="color: #FFFFFF; font-family: Arial; font-size: 13px; line-height: 16px;">Lorem
+									ipsum</span></td>
+							<td class="cell1" th:text="${person.population}"><span
+								style="color: #FFFFFF; font-family: Arial; font-size: 13px; line-height: 16px;">1977</span></td>
+							<td class="cell1"><span
+								style="color: #FFFFFF; font-family: Arial; font-size: 13px; line-height: 16px;">8.8</span></td>
+							<td class="cell1"><span
+								style="color: #FFFFFF; font-family: Arial; font-size: 13px; line-height: 16px;">777,100</span></td>
+						</tr>
+
+					</table>
+				</div>
+				<div class="col-3"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

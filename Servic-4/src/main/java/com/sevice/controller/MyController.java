@@ -18,22 +18,31 @@ public class MyController {
     @Autowired
     ICityService cityService;
 
-    @GetMapping("/showCities")
-    public String findCities(Model model) {
+//    @GetMapping("/deviceClient")
+//    public String findCities(Model model) {
         
-        List<City> cities = (List<City>) cityService.findAll();
+//        List<City> cities = (List<City>) cityService.findAll();
+//        
+//        model.addAttribute("cities", cities);
         
-        model.addAttribute("cities", cities);
-        
-        return "showCities";
-    }
-    @RequestMapping(value = {"/table"}, method = RequestMethod.GET)
-    public String table(Model model) {
+//        return "deviceClient";
+//    }
+    @RequestMapping(value = {"/"}, method = RequestMethod.GET)
+    public String tableq(Model model) {
     	
    	List<City> cities = (List<City>) cityService.findAll();
    	
   	model.addAttribute("cities", cities);
+    	System.out.println(cities.toString());
+    	return "deviceClient";
+    }
+    @RequestMapping(value = {"/index"}, method = RequestMethod.GET)
+    public String table(Model model) {
     	
-    	return "table";
+    	List<City> cities = (List<City>) cityService.findAll();
+    	
+    	model.addAttribute("cities", cities);
+    	System.out.println(cities.toString());
+    	return "index";
     }
 }

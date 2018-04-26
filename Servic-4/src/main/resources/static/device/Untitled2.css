@@ -16,48 +16,6 @@ a:hover
    color: #0000FF;
    text-decoration: underline;
 }
-a.style1
-{
-   color: #F5FFFA;
-   text-decoration: none;
-   -webkit-transition: all 300ms ease-in-out;
-   -moz-transition: all 300ms ease-in-out;
-   transition: all 300ms ease-in-out;
-   position: relative;
-   display: inline-block;
-}
-a.style1::after
-{
-   background: transparent;
-   content: "";
-   display: block;
-   height: 0;
-   width: 100%;
-   margin-top: 2px;
-   -webkit-transition: all 300ms ease-in-out;
-   -moz-transition: all 300ms ease-in-out;
-   transition: all 300ms ease-in-out;
-}
-a.style1:hover::after
-{
-   background: #0000FF;
-   height: 2px;
-}
-a.style1:visited
-{
-   color: #800080;
-   text-decoration: none;
-}
-a.style1:active
-{
-   color: #FF0000;
-   text-decoration: none;
-}
-a.style1:hover
-{
-   color: #0000FF;
-   text-decoration: none;
-}
 h1
 {
    font-family: Arial;
