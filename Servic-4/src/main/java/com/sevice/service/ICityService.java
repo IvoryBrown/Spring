@@ -2,9 +2,9 @@ package com.sevice.service;
 
 import java.util.List;
 
-import com.sevice.bean.City;
+import com.sevice.bean.Device;
 
 public interface ICityService {
 
-    public List<City> findAll();
+    public List<Device> findAll();
 }

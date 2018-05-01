@@ -4,7 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sevice.bean.City;
+import com.sevice.bean.Device;
 import com.sevice.repository.CityRepository;
 
 @Service
@@ -14,9 +14,9 @@ public class CityService implements ICityService {
     private CityRepository repository;
 
     @Override
-    public List<City> findAll() {
+    public List<Device> findAll() {
 
-        List<City> cities = (List<City>) repository.findAll();
+        List<Device> cities = (List<Device>) repository.findAll();
         
         return cities;
     }

@@ -8,51 +8,52 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "cities")
-public class City {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+public class Device {
 
-    private String name;
-    private Integer population;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-    public City() {
-    }
+	private String name;
+	private Integer population;
 
-    public City(Long id, String name, Integer population) {
-        this.id = id;
-        this.name = name;
-        this.population = population;
-    }
 
-    public Long getId() {
-        return id;
-    }
+	public Device() {
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Device(Long id, String name, Integer population) {
+		this.id = id;
+		this.name = name;
+		this.population = population;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public Integer getPopulation() {
-        return population;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setPopulation(Integer population) {
-        this.population = population;
-    }
-    
-    @Override
-    public String toString() {
-        return "City{" + "id=" + id + ", name=" + name
-                + ", population=" + population + '}';
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Integer getPopulation() {
+		return population;
+	}
+
+	public void setPopulation(Integer population) {
+		this.population = population;
+	}
+
+	@Override
+	public String toString() {
+		return "City{" + "id=" + id + ", name=" + name + ", population=" + population + '}';
+	}
+
 }
