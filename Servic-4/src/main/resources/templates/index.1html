@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Névtelen oldal</title>
+<meta name="generator"
+	content="WYSIWYG Web Builder 12 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="index/font-awesome.min.css" rel="stylesheet">
+<link href="index/Untitled2.css" rel="stylesheet">
+<link href="index/index.css" rel="stylesheet">
+<script src="index/jquery-1.12.4.min.js"></script>
+<script src="index/wb.panel.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#PanelMenu1").panel({
+			animate : true,
+			animationDuration : 200,
+			animationEasing : 'linear',
+			dismissible : true,
+			display : 'overlay',
+			position : 'right',
+			toggle : true,
+			overlay : true
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="wb_PageHeader">
+		<div id="PageHeader">
+			<div class="row">
+				<div class="col-1">
+					<div id="wb_FontAwesomeIcon1"
+						style="display: inline-block; width: 40px; height: 40px; text-align: center; z-index: 0;">
+						<a href="index"><div id="FontAwesomeIcon1">
+								<i class="fa fa-user-circle-o">&nbsp;</i>
+							</div></a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div id="wb_Heading1"
+						style="display: inline-block; width: 100%; text-align: center; z-index: 1;">
+						<h1 id="Heading1">PcVipService</h1>
+					</div>
+				</div>
+				<div class="col-3">
+					<div id="wb_PanelMenu1"
+						style="display: inline-block; width: 63px; height: 70px; z-index: 2;">
+						<a href="#PanelMenu1_markup" id="PanelMenu1">&nbsp;</a>
+						<div id="PanelMenu1_markup">
+							<ul>
+								<li><a href="index"><i class="fa fa-home fa-fw">&nbsp;</i><span>Home</span></a></li>
+								<li><a href="#"><i class="fa fa-user fa-fw">&nbsp;</i><span>&#220;gyf&#233;l
+											T&#225;bla</span></a></li>
+								<li><a href="deviceClient"><i
+										class="fa fa-camera fa-fw">&nbsp;</i><span>Eszk&#246;z
+											T&#225;bla</span></a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

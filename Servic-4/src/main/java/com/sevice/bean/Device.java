@@ -1,5 +1,6 @@
 package com.sevice.bean;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,21 +8,23 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "cities")
+@Table(name = "dolgozok")
 public class Device {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	 @Column(name = "idugyintezo")
 	private Long id;
-
+	@Column(name = "ugyintezo_neve")
 	private String name;
-	private Integer population;
+	@Column(name = "technikus_neve")
+	private String population;
 
 
 	public Device() {
 	}
 
-	public Device(Long id, String name, Integer population) {
+	public Device(Long id, String name, String population) {
 		this.id = id;
 		this.name = name;
 		this.population = population;
@@ -43,11 +46,11 @@ public class Device {
 		this.name = name;
 	}
 
-	public Integer getPopulation() {
+	public String getPopulation() {
 		return population;
 	}
 
-	public void setPopulation(Integer population) {
+	public void setPopulation(String population) {
 		this.population = population;
 	}
 
