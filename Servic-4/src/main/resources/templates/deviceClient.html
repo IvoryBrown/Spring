@@ -85,13 +85,13 @@
 							<td class="cell0"><span
 								style="color: #61A2B1; font-family: Arial; font-size: 13px; line-height: 16px;"><strong>Votes</strong></span></td>
 						</tr>
-						<tr th:each="person : ${cities}">
-							<td class="cell1" th:text="${person.id}"><span
+						<tr th:each="device : ${deviceHTML}">
+							<td class="cell1" th:text="${device.deviceID}"><span
 								style="color: #F5FFFA; font-family: Arial; font-size: 13px; line-height: 16px;">1</span></td>
-							<td class="cell1" th:text="${person.name}"><span
+							<td class="cell1" th:text="${device.deviceClientID}"><span
 								style="color: #FFFFFF; font-family: Arial; font-size: 13px; line-height: 16px;">Lorem
 									ipsum</span></td>
-							<td class="cell1" th:text="${person.population}"><span
+							<td class="cell1" th:text="${device.deviceNumber}"><span
 								style="color: #FFFFFF; font-family: Arial; font-size: 13px; line-height: 16px;">1977</span></td>
 							<td class="cell1"><span
 								style="color: #FFFFFF; font-family: Arial; font-size: 13px; line-height: 16px;">8.8</span></td>

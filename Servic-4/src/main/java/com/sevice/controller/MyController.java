@@ -8,32 +8,27 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.sevice.bean.Device;
-import com.sevice.service.ICityService;
+import com.sevice.deivce.service.IDeviceService;
+import com.sevice.device.bean.Device;
 
 @Controller
 public class MyController {
-    
-    @Autowired
-    ICityService cityService;
 
+	@Autowired
+	IDeviceService deviceService;
 
-    @RequestMapping(value = {"/deviceClient"}, method = RequestMethod.GET)
-    public String tableq(Model model) {
-    	
-   	List<Device> cities = (List<Device>) cityService.findAll();
-   	
-  	model.addAttribute("cities", cities);
-    	System.out.println(cities.toString());
-    	return "deviceClient";
-    }
-    @RequestMapping(value = {"/index"}, method = RequestMethod.GET)
-    public String table(Model model) {
-    	
-    	List<Device> cities = (List<Device>) cityService.findAll();
-    	
-    	model.addAttribute("cities", cities);
-    	System.out.println(cities.toString());
-    	return "index";
-    }
+	@RequestMapping(value = { "/index" }, method = RequestMethod.GET)
+	public String home(Model model) {
+		return "index";
+	}
+
+	@RequestMapping(value = { "/deviceClient" }, method = RequestMethod.GET)
+	public String device(Model model) {
+
+		List<Device> device = (List<Device>) deviceService.findAll();
+
+		model.addAttribute("deviceHTML", device);
+		System.out.println(device.toString());
+		return "deviceClient";
+	}
 }
