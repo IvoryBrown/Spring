@@ -22,13 +22,13 @@ public class MyController {
 		return "index";
 	}
 
-	@RequestMapping(value = { "/deviceClient" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/device" }, method = RequestMethod.GET)
 	public String device(Model model) {
 
 		List<Device> device = (List<Device>) deviceService.findAll();
 
 		model.addAttribute("deviceHTML", device);
 		System.out.println(device.toString());
-		return "deviceClient";
+		return "device";
 	}
 }
