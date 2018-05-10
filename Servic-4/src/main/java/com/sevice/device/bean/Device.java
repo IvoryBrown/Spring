@@ -1,7 +1,5 @@
 package com.sevice.device.bean;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -54,13 +52,13 @@ public class Device {
 	@Column(name = "eszkoz_megjegyzes")
 	private String deviceComment;
 	@Column(name = "vasarlasi_datuma")
-	private Date deviceSalesBuying;
+	private String deviceSalesBuying;
 	@Column(name = "bejelentes_datuma")
-	private Date deviceAddDate;
+	private String deviceAddDate;
 	@Column(name = "hatarido_datuma")
-	private Date deviceEndDate;
+	private String deviceEndDate;
 	@Column(name = "kiszallas_datuma")
-	private Date deviceDeliveryDate;
+	private String deviceDeliveryDate;
 	@Column(name = "adatmentes")
 	private String deviceDataRecovery;
 	@Column(name = "softver")
@@ -70,31 +68,31 @@ public class Device {
 	@Column(name = "softver_megjegyzés")
 	private String deviceSoftverComment;
 	@Column(name = "haz")
-	private Boolean deviceNewHouse;
+	private String deviceNewHouse;
 	@Column(name = "tapegyseg")
-	private Boolean devicePowerSupply;
+	private String devicePowerSupply;
 	@Column(name = "processzor")
-	private Boolean deviceProcessor;
+	private String deviceProcessor;
 	@Column(name = "alaplap")
-	private Boolean deviceBaseBoard;
+	private String deviceBaseBoard;
 	@Column(name = "memoria")
-	private Boolean deviceMemory;
+	private String deviceMemory;
 	@Column(name = "videokartya")
-	private Boolean deviceVideoCard;
+	private String deviceVideoCard;
 	@Column(name = "ssd")
-	private Boolean deviceSSDDrive;
+	private String deviceSSDDrive;
 	@Column(name = "meghajto")
-	private Boolean deviceHardDrive;
+	private String deviceHardDrive;
 	@Column(name = "hutoventilator")
-	private Boolean deviceCoolingFan;
+	private String deviceCoolingFan;
 	@Column(name = "optikai_meghajto")
-	private Boolean deviceOpticalDrive;
+	private String deviceOpticalDrive;
 	@Column(name = "bovitokartya")
-	private Boolean deviceExpansionCard;
+	private String deviceExpansionCard;
 	@Column(name = "laptop")
-	private Boolean deviceLaptop;
+	private String deviceLaptop;
 	@Column(name = "elkeszult_datuma")
-	private Date deviceCompletedDate;
+	private String deviceCompletedDate;
 	@Column(name = "hibajavitas_leirasa")
 	private String deviceErrorCorrection;
 	@Column(name = "technikus")
@@ -104,19 +102,19 @@ public class Device {
 	// String converter
 
 	public Device() {
-		
+
 	}
 
 	public Device(Long deviceID, String deviceClientID, String deviceNumber, String deviceCompanyName,
 			String deviceClientName, String deviceName, String deviceManufacturer, String deviceSerialNumber,
 			String deviceRepairLocation, String deviceStatus, String deviceNewMachine, String deviceAdministrator,
 			String devicePriorit, String devicePassword, String deviceReferences, String deviceAccesssory,
-			String deviceInjury, String deviceErrorDescription, String deviceComment, Date deviceSalesBuying,
-			Date deviceAddDate, Date deviceEndDate, Date deviceDeliveryDate, String deviceDataRecovery,
-			String deviceSoftver, String deviceOperatingSystem, String deviceSoftverComment, Boolean deviceNewHouse,
-			Boolean devicePowerSupply, Boolean deviceProcessor, Boolean deviceBaseBoard, Boolean deviceMemory,
-			Boolean deviceVideoCard, Boolean deviceSSDDrive, Boolean deviceHardDrive, Boolean deviceCoolingFan,
-			Boolean deviceOpticalDrive, Boolean deviceExpansionCard, Boolean deviceLaptop, Date deviceCompletedDate,
+			String deviceInjury, String deviceErrorDescription, String deviceComment, String deviceSalesBuying,
+			String deviceAddDate, String deviceEndDate, String deviceDeliveryDate, String deviceDataRecovery,
+			String deviceSoftver, String deviceOperatingSystem, String deviceSoftverComment, String deviceNewHouse,
+			String devicePowerSupply, String deviceProcessor, String deviceBaseBoard, String deviceMemory,
+			String deviceVideoCard, String deviceSSDDrive, String deviceHardDrive, String deviceCoolingFan,
+			String deviceOpticalDrive, String deviceExpansionCard, String deviceLaptop, String deviceCompletedDate,
 			String deviceErrorCorrection, String deviceTechnicalPerson, String deviceStatusz) {
 		super();
 		this.deviceID = deviceID;
@@ -316,35 +314,35 @@ public class Device {
 		this.deviceComment = deviceComment;
 	}
 
-	public Date getDeviceSalesBuying() {
+	public String getDeviceSalesBuying() {
 		return deviceSalesBuying;
 	}
 
-	public void setDeviceSalesBuying(Date deviceSalesBuying) {
+	public void setDeviceSalesBuying(String deviceSalesBuying) {
 		this.deviceSalesBuying = deviceSalesBuying;
 	}
 
-	public Date getDeviceAddDate() {
+	public String getDeviceAddDate() {
 		return deviceAddDate;
 	}
 
-	public void setDeviceAddDate(Date deviceAddDate) {
+	public void setDeviceAddDate(String deviceAddDate) {
 		this.deviceAddDate = deviceAddDate;
 	}
 
-	public Date getDeviceEndDate() {
+	public String getDeviceEndDate() {
 		return deviceEndDate;
 	}
 
-	public void setDeviceEndDate(Date deviceEndDate) {
+	public void setDeviceEndDate(String deviceEndDate) {
 		this.deviceEndDate = deviceEndDate;
 	}
 
-	public Date getDeviceDeliveryDate() {
+	public String getDeviceDeliveryDate() {
 		return deviceDeliveryDate;
 	}
 
-	public void setDeviceDeliveryDate(Date deviceDeliveryDate) {
+	public void setDeviceDeliveryDate(String deviceDeliveryDate) {
 		this.deviceDeliveryDate = deviceDeliveryDate;
 	}
 
@@ -380,107 +378,167 @@ public class Device {
 		this.deviceSoftverComment = deviceSoftverComment;
 	}
 
-	public Boolean getDeviceNewHouse() {
+	public String getDeviceNewHouse() {
+		if (deviceNewHouse.equals("1")) {
+			deviceNewHouse = "Igen";
+		} else {
+			deviceNewHouse = "Nem";
+		}
 		return deviceNewHouse;
 	}
 
-	public void setDeviceNewHouse(Boolean deviceNewHouse) {
+	public void setDeviceNewHouse(String deviceNewHouse) {
 		this.deviceNewHouse = deviceNewHouse;
 	}
 
-	public Boolean getDevicePowerSupply() {
+	public String getDevicePowerSupply() {
+		if (devicePowerSupply.equals("1")) {
+			devicePowerSupply = "Igen";
+		} else {
+			devicePowerSupply = "Nem";
+		}
 		return devicePowerSupply;
 	}
 
-	public void setDevicePowerSupply(Boolean devicePowerSupply) {
+	public void setDevicePowerSupply(String devicePowerSupply) {
 		this.devicePowerSupply = devicePowerSupply;
 	}
 
-	public Boolean getDeviceProcessor() {
+	public String getDeviceProcessor() {
+		if (deviceProcessor.equals("1")) {
+			deviceProcessor = "Igen";
+		} else {
+			deviceProcessor = "Nem";
+		}
 		return deviceProcessor;
 	}
 
-	public void setDeviceProcessor(Boolean deviceProcessor) {
+	public void setDeviceProcessor(String deviceProcessor) {
 		this.deviceProcessor = deviceProcessor;
 	}
 
-	public Boolean getDeviceBaseBoard() {
+	public String getDeviceBaseBoard() {
+		if (deviceBaseBoard.equals("1")) {
+			deviceBaseBoard = "Igen";
+		} else {
+			deviceBaseBoard = "Nem";
+		}
 		return deviceBaseBoard;
 	}
 
-	public void setDeviceBaseBoard(Boolean deviceBaseBoard) {
+	public void setDeviceBaseBoard(String deviceBaseBoard) {
 		this.deviceBaseBoard = deviceBaseBoard;
 	}
 
-	public Boolean getDeviceMemory() {
+	public String getDeviceMemory() {
+		if (deviceMemory.equals("1")) {
+			deviceMemory = "Igen";
+		} else {
+			deviceMemory = "Nem";
+		}
 		return deviceMemory;
 	}
 
-	public void setDeviceMemory(Boolean deviceMemory) {
+	public void setDeviceMemory(String deviceMemory) {
 		this.deviceMemory = deviceMemory;
 	}
 
-	public Boolean getDeviceVideoCard() {
+	public String getDeviceVideoCard() {
+		if (deviceVideoCard.equals("1")) {
+			deviceVideoCard = "Igen";
+		} else {
+			deviceVideoCard = "Nem";
+		}
 		return deviceVideoCard;
 	}
 
-	public void setDeviceVideoCard(Boolean deviceVideoCard) {
+	public void setDeviceVideoCard(String deviceVideoCard) {
 		this.deviceVideoCard = deviceVideoCard;
 	}
 
-	public Boolean getDeviceSSDDrive() {
+	public String getDeviceSSDDrive() {
+		if (deviceSSDDrive.equals("1")) {
+			deviceSSDDrive = "Igen";
+		} else {
+			deviceSSDDrive = "Nem";
+		}
 		return deviceSSDDrive;
 	}
 
-	public void setDeviceSSDDrive(Boolean deviceSSDDrive) {
+	public void setDeviceSSDDrive(String deviceSSDDrive) {
 		this.deviceSSDDrive = deviceSSDDrive;
 	}
 
-	public Boolean getDeviceHardDrive() {
+	public String getDeviceHardDrive() {
+		if (deviceHardDrive.equals("1")) {
+			deviceHardDrive = "Igen";
+		} else {
+			deviceHardDrive = "Nem";
+		}
 		return deviceHardDrive;
 	}
 
-	public void setDeviceHardDrive(Boolean deviceHardDrive) {
+	public void setDeviceHardDrive(String deviceHardDrive) {
 		this.deviceHardDrive = deviceHardDrive;
 	}
 
-	public Boolean getDeviceCoolingFan() {
+	public String getDeviceCoolingFan() {
+		if (deviceCoolingFan.equals("1")) {
+			deviceCoolingFan = "Igen";
+		} else {
+			deviceCoolingFan = "Nem";
+		}
 		return deviceCoolingFan;
 	}
 
-	public void setDeviceCoolingFan(Boolean deviceCoolingFan) {
+	public void setDeviceCoolingFan(String deviceCoolingFan) {
 		this.deviceCoolingFan = deviceCoolingFan;
 	}
 
-	public Boolean getDeviceOpticalDrive() {
+	public String getDeviceOpticalDrive() {
+		if (deviceOpticalDrive.equals("1")) {
+			deviceOpticalDrive = "Igen";
+		} else {
+			deviceOpticalDrive = "Nem";
+		}
 		return deviceOpticalDrive;
 	}
 
-	public void setDeviceOpticalDrive(Boolean deviceOpticalDrive) {
+	public void setDeviceOpticalDrive(String deviceOpticalDrive) {
 		this.deviceOpticalDrive = deviceOpticalDrive;
 	}
 
-	public Boolean getDeviceExpansionCard() {
+	public String getDeviceExpansionCard() {
+		if (deviceExpansionCard.equals("1")) {
+			deviceExpansionCard = "Igen";
+		} else {
+			deviceExpansionCard = "Nem";
+		}
 		return deviceExpansionCard;
 	}
 
-	public void setDeviceExpansionCard(Boolean deviceExpansionCard) {
+	public void setDeviceExpansionCard(String deviceExpansionCard) {
 		this.deviceExpansionCard = deviceExpansionCard;
 	}
 
-	public Boolean getDeviceLaptop() {
+	public String getDeviceLaptop() {
+		if (deviceLaptop.equals("1")) {
+			deviceLaptop = "Igen";
+		} else {
+			deviceLaptop = "Nem";
+		}
 		return deviceLaptop;
 	}
 
-	public void setDeviceLaptop(Boolean deviceLaptop) {
+	public void setDeviceLaptop(String deviceLaptop) {
 		this.deviceLaptop = deviceLaptop;
 	}
 
-	public Date getDeviceCompletedDate() {
+	public String getDeviceCompletedDate() {
 		return deviceCompletedDate;
 	}
 
-	public void setDeviceCompletedDate(Date deviceCompletedDate) {
+	public void setDeviceCompletedDate(String deviceCompletedDate) {
 		this.deviceCompletedDate = deviceCompletedDate;
 	}
 
