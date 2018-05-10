@@ -1,93 +1,131 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js" layout:decorator="index.html">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Sticky Table Headers Revisited | Demo 3</title>
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="device/css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="device/css/component.css" />
+<html lang="hu" class="no-js" layout:decorator="index">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sticky Table Headers Revisited | Demo 3</title>
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="stylesheet" type="text/css" href="device/css/demo.css" />
+<link rel="stylesheet" type="text/css" href="device/css/component.css" />
 
 
-  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 
-        
-	</head>
-	<body>
-        	<div layout:fragment="loginContent" >	
-		<div class="container" >
-		
+
+
+</head>
+<body>
+	<div layout:fragment="loginContent">
+		<div class="container">
+
 			<div class="component">
-		
-			 <table class="overflow-y">
+
+				<table class="overflow-y">
 					<thead>
 						<tr>
-							<th>Ügyfél</th><th>ID</th><th>Azonosító</th><th>Cég</th><th>Eszköz</th><th>Gyártó</th><th>Zeta</th><th>Eta</th><th>Theta</th><th>Iota</th><th>Kappa</th><th>Lambda</th><th>Mu</th><th>Nu</th><th>Xi</th><th>Omicron</th><th>Pi</th><th>Rho</th><th>Sigma</th><th>Tau</th><th>Upsilon</th>
+							<th>Ügyfél</th>
+							<th>ID</th>
+							<th>Azonosító</th>
+							<th>Cég</th>
+							<th>Eszköz</th>
+							<th>Gyártó</th>
+							<th>Serial no.</th>
+							<th>Javítás helye</th>
+							<th>Állapot</th>
+							<th>Státusz</th>
+							<th>Új gép</th>
+							<th>Ügyintéző</th>
+							<th>Technikus</th>
+							<th>Prioritás</th>
+							<th>Jelszó</th>
+							<th>Hivatkozási szám</th>
+							<th>Tartozékok</th>
+							<th>Sérülés</th>
+							<th>Hiba leírás</th>
+							<th>Valós hiba</th>
+							<th>Eszközről megjegyzés</th>
+							<th>Vásárlási</th>
+							<th>Bejelentés</th>
+							<th>Határidő</th>
+							<th>Kiszállás</th>
+							<th>Adatmentés</th>
+							<th>Szoftver</th>
+							<th>Operációs rendszer</th>
+							<th>Szoftver Megjegyzés</th>
+							<th>Ház</th>
+							<th>Tápegység</th>
+							<th>Processzor</th>
+							<th>Alaplap</th>
+							<th>Memória</th>
+							<th>Videokártya</th>
+							<th>SSD</th>
+							<th>Merevlemez</th>
+							<th>Hűtőventillátor</th>
+							<th>Optikai</th>
+							<th>Bővítőkártya</th>
+							<th>Laptop</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<th>Sample #1</th><td>23</td><td>88</td><td>8</td><td>2</td><td>67</td><td>83</td><td>81</td><td>37</td><td>91</td><td>96</td><td>13</td><td>3</td><td>95</td><td>98</td><td>10</td><td>87</td><td>70</td><td>54</td><td>72</td><td>75</td>
-						</tr><tr>
-							<th>Sample #2</th><td>14</td><td>21</td><td>20</td><td>21</td><td>9</td><td>68</td><td>60</td><td>73</td><td>22</td><td>29</td><td>9</td><td>49</td><td>49</td><td>66</td><td>58</td><td>10</td><td>8</td><td>24</td><td>19</td><td>65</td>
-						</tr><tr>
-							<th>Sample #3</th><td>4</td><td>50</td><td>89</td><td>72</td><td>99</td><td>90</td><td>24</td><td>86</td><td>95</td><td>44</td><td>32</td><td>97</td><td>18</td><td>90</td><td>81</td><td>9</td><td>38</td><td>4</td><td>85</td><td>15</td>
-						</tr><tr>
-							<th>Sample #4</th><td>10</td><td class="err">Parse error</td><td>32</td><td>45</td><td>53</td><td>29</td><td>35</td><td>35</td><td>75</td><td>9</td><td>69</td><td>66</td><td>93</td><td>42</td><td>81</td><td>85</td><td>72</td><td>70</td><td>15</td><td>38</td>
-						</tr><tr>
-							<th>Sample #5</th><td>85</td><td>42</td><td>71</td><td>56</td><td>30</td><td>3</td><td>41</td><td>87</td><td>94</td><td>99</td><td>24</td><td>20</td><td>96</td><td>62</td><td>90</td><td>13</td><td>38</td><td>47</td><td>9</td><td>6</td>
-						</tr><tr>
-							<th>Sample #6</th><td>18</td><td>80</td><td>85</td><td>65</td><td>9</td><td>93</td><td>93</td><td>61</td><td>49</td><td>10</td><td>45</td><td>3</td><td>93</td><td>61</td><td>4</td><td>80</td><td>2</td><td>60</td><td>53</td><td>81</td>
-						</tr><tr>
-							<th>Sample #7</th><td>30</td><td>81</td><td>46</td><td>50</td><td>71</td><td>60</td><td>8</td><td>33</td><td>87</td><td>34</td><td>35</td><td>74</td><td>34</td><td>31</td><td>97</td><td>10</td><td>40</td><td>95</td><td>92</td><td>93</td>
-						</tr><tr>
-							<th>Sample #8</th><td>29</td><td>91</td><td>85</td><td>92</td><td>2</td><td>84</td><td>29</td><td>28</td><td>25</td><td>63</td><td>18</td><td>97</td><td>87</td><td>59</td><td>53</td><td>7</td><td>47</td><td>21</td><td>62</td><td>11</td>
-						</tr><tr>
-							<th>Sample #9</th><td>45</td><td>96</td><td>25</td><td>60</td><td>56</td><td>67</td><td>48</td><td>7</td><td>30</td><td>64</td><td>10</td><td>0</td><td>38</td><td>72</td><td>83</td><td>61</td><td>35</td><td>96</td><td>84</td><td>49</td>
-						</tr><tr>
-							<th>Sample #10</th><td>66</td><td>63</td><td>25</td><td>28</td><td>67</td><td>83</td><td>25</td><td>10</td><td>0</td><td>18</td><td>98</td><td>92</td><td>73</td><td>40</td><td>78</td><td>88</td><td>99</td><td>30</td><td>74</td><td>88</td>
-						</tr><tr>
-							<th>Sample #11</th><td>8</td><td>34</td><td>9</td><td>56</td><td>38</td><td>37</td><td>17</td><td>74</td><td>33</td><td>55</td><td>76</td><td>95</td><td>34</td><td>5</td><td>39</td><td>13</td><td>99</td><td>35</td><td>15</td><td>56</td>
-						</tr><tr>
-							<th>Sample #12</th><td>28</td><td>1</td><td>93</td><td>79</td><td>56</td><td>7</td><td>70</td><td>62</td><td>58</td><td>96</td><td>25</td><td>40</td><td>49</td><td>35</td><td>44</td><td>67</td><td>6</td><td>73</td><td>38</td><td>91</td>
-						</tr><tr>
-							<th>Sample #13</th><td>85</td><td>1</td><td>70</td><td>31</td><td>32</td><td>42</td><td>91</td><td>75</td><td>51</td><td>77</td><td>35</td><td>53</td><td>7</td><td>79</td><td>17</td><td>75</td><td>55</td><td>47</td><td>42</td><td>41</td>
-						</tr><tr>
-							<th>Sample #14</th><td>93</td><td>59</td><td>47</td><td>68</td><td>75</td><td>61</td><td>37</td><td>34</td><td>44</td><td>36</td><td>59</td><td>95</td><td>31</td><td>10</td><td>11</td><td>62</td><td>98</td><td>34</td><td>58</td><td>93</td>
-						</tr><tr>
-							<th>Sample #15</th><td>81</td><td>28</td><td>36</td><td>88</td><td>85</td><td>66</td><td>66</td><td>68</td><td>78</td><td>64</td><td>95</td><td>59</td><td>35</td><td>15</td><td>51</td><td>84</td><td>59</td><td>29</td><td>22</td><td>35</td>
-						</tr><tr>
-							<th>Sample #16</th><td>71</td><td>90</td><td>78</td><td>60</td><td>28</td><td>61</td><td>88</td><td>2</td><td>23</td><td>48</td><td>11</td><td>79</td><td>93</td><td>19</td><td>74</td><td>31</td><td>55</td><td>10</td><td>70</td><td>95</td>
-						</tr><tr>
-							<th>Sample #17</th><td>64</td><td>17</td><td>49</td><td>71</td><td>6</td><td>44</td><td>38</td><td>14</td><td>95</td><td>70</td><td>69</td><td>9</td><td>76</td><td>41</td><td>77</td><td>83</td><td>99</td><td>43</td><td>54</td><td>33</td>
-						</tr><tr>
-							<th>Sample #18</th><td>20</td><td>36</td><td>10</td><td>0</td><td>35</td><td>35</td><td>2</td><td>29</td><td>98</td><td>22</td><td>30</td><td>45</td><td>49</td><td>80</td><td>48</td><td>20</td><td>11</td><td>31</td><td>14</td><td>12</td>
-						</tr><tr>
-							<th>Sample #19</th><td>23</td><td>74</td><td>72</td><td>43</td><td>99</td><td class="err">Parse error</td><td>96</td><td>34</td><td>9</td><td>59</td><td>56</td><td>10</td><td>19</td><td>53</td><td>21</td><td>71</td><td>75</td><td>55</td><td>51</td><td>82</td>
-						</tr><tr>
-							<th>Sample #20</th><td>16</td><td>88</td><td>17</td><td>85</td><td>6</td><td>45</td><td>41</td><td>67</td><td>12</td><td>70</td><td>83</td><td>73</td><td>85</td><td>19</td><td>4</td><td>5</td><td>13</td><td>85</td><td>53</td><td>6</td>
-						</tr><tr>
-							<th>Sample #21</th><td>35</td><td>34</td><td>69</td><td>78</td><td>10</td><td>89</td><td>38</td><td>81</td><td>95</td><td>51</td><td>37</td><td>49</td><td>50</td><td>66</td><td>17</td><td>15</td><td>99</td><td>19</td><td>54</td><td>29</td>
-						</tr><tr>
-							<th>Sample #22</th><td>88</td><td>65</td><td>97</td><td>73</td><td>38</td><td>74</td><td>92</td><td>86</td><td>75</td><td>77</td><td>34</td><td>28</td><td>31</td><td>12</td><td>78</td><td>25</td><td>79</td><td>60</td><td>8</td><td>86</td>
-						</tr><tr>
-							<th>Sample #23</th><td>86</td><td>18</td><td>11</td><td>37</td><td>70</td><td>86</td><td>2</td><td>6</td><td>50</td><td>24</td><td>82</td><td>9</td><td>15</td><td>70</td><td>29</td><td>74</td><td>15</td><td>86</td><td>42</td><td>14</td>
-						</tr><tr>
-							<th>Sample #24</th><td>80</td><td>62</td><td>69</td><td>25</td><td>90</td><td>16</td><td>27</td><td>93</td><td>70</td><td>53</td><td>89</td><td>60</td><td>39</td><td>31</td><td>43</td><td>67</td><td>94</td><td>31</td><td>38</td><td>91</td>
-						</tr><tr>
-							<th>Sample #25</th><td>94</td><td>80</td><td>13</td><td>11</td><td>65</td><td>20</td><td>85</td><td>86</td><td>51</td><td>67</td><td>15</td><td>54</td><td>34</td><td>75</td><td>87</td><td>79</td><td>11</td><td>43</td><td>32</td><td>52</td>
+					
+						<tr th:each="device : ${deviceHTML}">
+							<th th:text="${device.deviceClientName}"></th>
+							<td th:text="${device.deviceID}"></td>
+							<td th:text="${device.deviceNumber}"></td>
+							<td th:text="${device.deviceCompanyName}"></td>
+							<td th:text="${device.deviceName}"></td>
+							<td th:text="${device.deviceManufacturer}"></td>
+							<td th:text="${device.deviceSerialNumber}"></td>
+							<td th:text="${device.deviceRepairLocation}"></td>
+							<td th:text="${device.deviceStatus}"></td>
+							<td th:text="${device.deviceStatusz}"></td>
+							<td th:text="${device.deviceNewMachine}"></td>
+							<td th:text="${device.deviceAdministrator}"></td>
+							<td th:text="${device.deviceTechnicalPerson}"></td>
+							<td th:text="${device.devicePriorit}"></td>
+							<td th:text="${device.devicePassword}"></td>
+							<td th:text="${device.deviceReferences}"></td>
+							<td th:text="${device.deviceAccesssory}"></td>
+							<td th:text="${device.deviceInjury}"></td>
+							<td th:text="${device.deviceErrorDescription}"></td>
+							<td th:text="${device.deviceErrorCorrection}"></td>
+							<td th:text="${device.deviceComment}"></td>
+							<td th:text="${device.deviceSalesBuying}"></td>
+							<td th:text="${device.deviceAddDate}"></td>
+							<td th:text="${device.deviceEndDate}"></td>
+							<td th:text="${device.deviceDeliveryDate}"></td>
+							<td th:text="${device.deviceDataRecovery}"></td>
+							<td th:text="${device.deviceSoftver}"></td>
+							<td th:text="${device.deviceOperatingSystem}"></td>
+							<td th:text="${device.deviceSoftverComment}"></td>
+							<td th:text="${device.deviceNewHouse}"></td>
+							<td th:text="${device.devicePowerSupply}"></td>
+							<td th:text="${device.deviceProcessor}"></td>
+							<td th:text="${device.deviceBaseBoard}"></td>
+							<td th:text="${device.deviceMemory}"></td>
+							<td th:text="${device.deviceVideoCard}"></td>
+							<td th:text="${device.deviceSSDDrive}"></td>
+							<td th:text="${device.deviceHardDrive}"></td>
+							<td th:text="${device.deviceCoolingFan}"></td>
+							<td th:text="${device.deviceOpticalDrive}"></td>
+							<td th:text="${device.deviceExpansionCard}"></td>
+							<td th:text="${device.deviceLaptop}"></td>
+							
 						</tr>
+						
 					</tbody>
 				</table>
-				
+
 			</div>
-			
-		</div><!-- /container -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+		</div>
+		<!-- /container -->
+		<script
+			src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script
+			src="http://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
 		<script src="device/js/jquery.stickyheader.js"></script>
-      </div>
-	</body>
+	</div>
+</body>
 </html>
