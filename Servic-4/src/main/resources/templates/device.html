@@ -24,7 +24,7 @@
 				<table class="overflow-y">
 					<thead>
 						<tr>
-							<th>Ügyfél</th>
+							<th >Ügyfél</th>
 							<th>ID</th>
 							<th>Azonosító</th>
 							<th>Cég</th>
@@ -70,8 +70,8 @@
 					<tbody>
 					
 						<tr th:each="device : ${deviceHTML}">
-							<th th:text="${device.deviceClientName}"></th>
-							<td th:text="${device.deviceID}"></td>
+							<th  th:text="${device.deviceClientName}"></th>
+							<td  th:text="${device.deviceID}"></td>
 							<td th:text="${device.deviceNumber}"></td>
 							<td th:text="${device.deviceCompanyName}"></td>
 							<td th:text="${device.deviceName}"></td>
